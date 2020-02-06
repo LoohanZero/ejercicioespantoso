@@ -7,6 +7,9 @@ const producto1 = confirm("Desea adquirir un televisor?");
 
 let mensaje = "";
 
+let mensajePagoEfectivo = `Detalle de la compra: ${mensaje} \n No posee codigo de descuento o el mismo es incorrecto \n 
+Total $${precioTotal} \n Muchas gracias por su compra ${nombre}`;
+
 
 if (producto1) {
     const cantidadProducto1 = Number(prompt("Cuantas unidades desea llevar"));
@@ -74,8 +77,7 @@ if (producto1 || producto2) {
                 alert(`Detalle de la compra: ${mensaje} \n El descuento es de 10%, y el total a pagar es de $${precioTotal - descuento} \n 
           Total $${precioTotal-descuento}`)
             } else {
-                alert(`Detalle de la compra: ${mensaje} \n No posee codigo de descuento o el mismo es incorrecto \n 
-            Total $${precioTotal} \n Muchas gracias por su compra ${nombre}`)
+                alert(mensajePagoEfectivo);
             }
 
         }
@@ -101,8 +103,7 @@ Total $${precioTotal*1.15}`);
             }
 
         } else {
-            alert(`Detalle de la compra: ${mensaje} \n No posee codigo de descuento o el mismo es incorrecto \n 
-    Total $${precioTotal} \n Muchas gracias por su compra ${nombre}`)
+            alert(mensajePagoEfectivo);
         }
     }
 }
